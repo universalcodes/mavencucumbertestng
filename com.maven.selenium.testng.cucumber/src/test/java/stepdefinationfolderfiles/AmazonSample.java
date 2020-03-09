@@ -13,6 +13,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import cucumber.api.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
@@ -30,6 +32,7 @@ public class AmazonSample {
 						+ System.currentTimeMillis() + "screenshot.jpg"));
 	}
 
+	@Given("^url opened$")
 	public static void amazonproductsale() throws InterruptedException, IOException {
 
 		WebDriverManager.chromedriver().setup();
